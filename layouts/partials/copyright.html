@@ -1,0 +1,44 @@
+<div class="post-copyright">
+  <img src="/imgs/cc/cc.svg" width="75" height="75" align="right" />
+  {{- if .Params.repost}}
+    <strong>本文是转载文章，原文信息如下:</strong>
+    <ul>
+      <li class="post-copyright-title">
+        <strong>原文作者:</strong>
+          {{ .Params.orauthor }}
+      </li>
+      <li class="post-copyright-title">
+        <strong>原文标题:</strong>
+        {{ .Params.ortitle }}
+      </li> 
+      <li class="post-copyright-title">
+        <strong>原文链接:</strong>
+        <a id="post-cr-link" target="_blank" href="{{.Params.orilink}}">{{ .Params.orilink }}</a>
+      </li>
+      <li class="post-copyright-license">
+        本文是转载文章,我觉得该文章写的很好，所以转载到本站，版权归原作者所有，如果侵权请联系我进行删除，联系邮箱: admin@yangyanxing.com
+      </li>
+    </ul>
+  {{- else}}
+  <ul>
+    <li class="post-copyright-title">
+      <strong>文章标题:</strong>
+      {{ .Title }}
+    </li>
+    <li class="post-copyright-author">
+      <strong>本文作者:</strong>
+      {{ .Site.Author.name }}
+    </li>
+    <li class="post-copyright-link">
+      <strong>本文链接:</strong>
+      <a id="post-cr-link" href="{{ .Permalink | absLangURL }}" title="{{ .Title }}">{{ .Permalink | absLangURL }}</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>版权声明: </strong>
+      {{- $ccText := .Site.Params.creativeCommons.license | upper }}
+      {{- $ccLink := printf "<a target='_blank' href='https://creativecommons.org/licenses/by-nc-sa/4.0/deed.%s'>%s</a>" (substr .Site.LanguageCode 0 2) $ccText }}
+      {{ printf (T "PostCRLicenseContent") $ccLink | safeHTML }}
+    </li>
+  </ul>
+  {{- end}}
+</div>

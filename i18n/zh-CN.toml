@@ -201,3 +201,9 @@ other = "更改"
 [deleted]
 other = "删除"
 # === shortcodes/version.html ===
+
+[PostCRTitle]
+other = "文章标题"
+
+[PostCRLicenseContent]
+other = "本博客所有文章除特别声明外，均采用 <i class=\"fab fa-fw fa-creative-commons\"></i>%s 许可协议。非商业转载请注明出处（作者，原文链接），商业转载请联系作者获得授权。"

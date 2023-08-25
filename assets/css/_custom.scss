@@ -2,3 +2,29 @@
 // Custom style
 // 自定义样式
 // ==============================
+
+.post-copyright {
+    border-left: 3px solid #ff2a2a;
+    background: #f5f5f5;
+
+    img {
+      margin: 8px;
+      opacity: .8;
+      filter: blur(.08em);
+      -webkit-transform: rotate(320deg);
+      -moz-transform: rotate(320deg);
+      -ms-transform: rotate(320deg);
+      -o-transform: rotate(320deg);
+      transform: rotate(320deg);
+    }
+
+    ul {
+      list-style: none;
+      padding: .5em 1em;
+      background: #f5f5f5;
+      border-left: 3px solid #ff2a2a;
+      margin: 1em 0;
+      border: none;
+      background: none;
+    }
+  }
